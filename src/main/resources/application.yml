@@ -1,0 +1,26 @@
+spring:
+#Redis Config
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    database: 0
+  cache:
+    type: redis
+  # DataSource Config
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/localh2
+    username: root
+    password: root
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+logging:
+  level:
+    root: INFO
